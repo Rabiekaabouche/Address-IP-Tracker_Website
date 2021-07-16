@@ -1,0 +1,43 @@
+.info {
+	flex-basis: 25%;
+	padding: 20px 18px;
+	position: relative;
+}
+
+@media (max-width: 376px) {
+	.info {
+		padding: 10px 18px;
+		text-align: center;
+	}
+}
+
+.info:not(:last-child)::before {
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 50%;
+	background-color: hsl(0deg 1% 84%);
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+}
+
+.info h5 {
+	font-weight: 700;
+	color: hsl(0, 0%, 59%);
+	font-size: 12px;
+	margin-bottom: 4px;
+}
+
+.info p {
+	font-weight: 500;
+	font-size: 17px;
+	color: hsl(0, 0%, 17%);
+	white-space: pre-line;
+}
+
+@media (max-width: 376px) {
+	.info p {
+		white-space: normal;
+	}
+}
