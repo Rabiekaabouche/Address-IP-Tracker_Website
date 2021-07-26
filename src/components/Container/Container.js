@@ -12,9 +12,7 @@ function Container() {
 	const [loading, setLoading] = useState(true);
 	useEffect(() => {
 		axios
-			.get(
-				"https://geo.ipify.org/api/v1?apiKey=at_Uyykw1QN6Og7ulQIuEeyyD7DuB7UF&ipAddress=8.8.8.8"
-			)
+			.get(`https://geo.ipify.org/api/v1?apiKey=${KEY_API}&ipAddress=8.8.8.8`)
 			.then((data) => {
 				setDataApi(data.data);
 				setLoading(false);
